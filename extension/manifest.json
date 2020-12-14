@@ -1,0 +1,26 @@
+{
+	"name": "Notes, Quotes, and G.O.A.T's ",
+	"version": "1.0",
+	"page_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "goat.png",
+			"32": "goat.png",
+			"64": "goat.png",
+			"128": "goat.png"
+		}
+	},
+	"icons": {
+		"16": "goat.png",
+		"32": "goat.png",
+		"64": "goat.png",
+		"128": "goat.png"
+	},
+	"permissions": ["activeTab", "declarativeContent", "storage"],
+	"background": {
+		"scripts": ["onInstall.js"],
+		"persistent": false
+	},
+	"description": "Organize your favorite quotes, take down useful notes, and see some from history's G.O.A.T's",
+	"manifest_version": 2
+}
