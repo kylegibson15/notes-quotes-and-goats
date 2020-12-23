@@ -10,13 +10,13 @@ chrome.storage.sync.get('color', data => {
 interface IElement {
   target: {
     value: string;
-  }
+  };
 }
 
 if (changeColor) {
   changeColor.onclick = element => {
     if (!element) return;
-    const color = (element as unknown as IElement).target.value || 'blue';
+    const color = ((element as unknown) as IElement).target.value || 'blue';
     chrome.tabs.query({active: true, currentWindow: true}, tabs => {
       chrome.tabs.executeScript(tabs[0].id as number, {
         code: 'document.body.style.backgroundColor = "' + color + '";',

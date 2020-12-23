@@ -9,7 +9,7 @@
     "clean": "gts clean",
     "copy": "cp extension/popup.html build/ && cp extension/manifest.json build/ && cp extension/onInstall.js build/ && cp extension/images/goat.png build/",
     "compile": "tsc && npm run copy",
-    "fix": "gts fix",
+    "lint:fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run lint"
