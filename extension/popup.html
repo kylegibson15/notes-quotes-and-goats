@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<style>
-			button {
-				height: 30px;
-				width: 30px;
-				outline: none;
-			}
-		</style>
-	</head>
-	<body>
-		<button id="changeColor"></button>
-		<script src="index.js"></script>
-	</body>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body style="font-family: system-ui;" class="background">
+	<div id="root">
+		<h2>Notes, Quotes, and G.O.A.T.S.</h2>
+
+		<div id="sections_group">
+			<section>
+				<h2>Today's Quote</h2>
+				<p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+			</section>
+
+			<section id="add_group">
+				<button>Add Note</button>
+				<button>Add Quote</button>
+			</section>
+		</div>
+	</div>
+	<!-- <script src="js/three.js"></script> -->
+	<script src="index.js"></script>
+</body>
+
 </html>

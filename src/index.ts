@@ -1,26 +1,36 @@
-const changeColor = document.getElementById('changeColor');
+// import * as THREE from 'three';
 
-chrome.storage.sync.get('color', data => {
-  console.log({changeColor, data});
-  if (!changeColor) return;
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
-});
+// const scene = new THREE.Scene();
+// const camera = new THREE.PerspectiveCamera(
+//   75,
+//   window.innerWidth / window.innerHeight,
+//   0.1,
+//   1000
+// );
+// const renderer = new THREE.WebGLRenderer();
+// renderer.setSize(window.innerWidth, window.innerHeight);
+// document.body.appendChild(renderer.domElement);
+// const geometry = new THREE.TorusGeometry(1, .4, 15, 30);
+// const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
+// const cube = new THREE.Mesh(geometry, material);
+// scene.add(cube);
 
-interface IElement {
-  target: {
-    value: string;
-  };
-}
+// camera.position.z = 5;
 
-if (changeColor) {
-  changeColor.onclick = element => {
-    if (!element) return;
-    const color = ((element as unknown) as IElement).target.value || 'blue';
-    chrome.tabs.query({active: true, currentWindow: true}, tabs => {
-      chrome.tabs.executeScript(tabs[0].id as number, {
-        code: 'document.body.style.backgroundColor = "' + color + '";',
-      });
-    });
-  };
+// const animate = function () {
+//   requestAnimationFrame(animate);
+
+//   cube.rotation.x += 0.01;
+//   cube.rotation.y += 0.01;
+
+//   renderer.render(scene, camera);
+// };
+
+// animate();
+
+const root = document.getElementById('root') ?? document.createElement('div');
+
+for (let i = 0; i < 20; i++) {
+  const span = document.createElement('span');
+  root.appendChild(span);
 }
